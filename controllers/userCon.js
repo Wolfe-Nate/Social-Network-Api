@@ -1,8 +1,6 @@
 const { User, Thought } = require("../models");
 
-const userController = {
-  //where we create controller methods
-  //get all users, get user by ID, create user, update user,
+const userCon = {
   getAllUsers(req, res) {
     User.find()
       .select("-__v")
@@ -87,4 +85,4 @@ const userController = {
   },
 };
 
-module.exports = userController;
+module.exports = userCon;
